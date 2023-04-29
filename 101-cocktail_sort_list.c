@@ -22,7 +22,7 @@ void cocktail_sort_list(listint_t **list)
     do
     {
         swapped = 0;
-        for (node = left; node != right; node = node->next)
+        for (node = left; node != right; node = node->next) /* left llop*/
         {
             if (node->n > node->next->n)
             {
@@ -45,7 +45,7 @@ void cocktail_sort_list(listint_t **list)
             break;
         swapped = 0;
         right = right->prev;
-        for (node = right; node != left; node = node->prev)
+        for (node = right; node != left; node = node->prev) /* right loop*/
         {
             if (node->n < node->prev->n)
             {
